@@ -21,45 +21,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris Jokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHP-fe-I3S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chuck Norris Jokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHP-fe-I3S">
                                 <rect key="frame" x="112" y="45" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb5-rd-N69">
-                                <rect key="frame" x="60" y="139" width="254" height="389"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chE-yH-bNb">
-                                <rect key="frame" x="60" y="139" width="254" height="389"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chE-yH-bNb">
+                                <rect key="frame" x="60" y="108" width="254" height="389"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avS-Bl-Kjm">
-                                <rect key="frame" x="154" y="555" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtF-ki-gyT">
+                                <rect key="frame" x="128" y="505" width="118" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Joke"/>
                                 <connections>
-                                    <action selector="jokeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fur-Ap-P43"/>
+                                    <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KJ-iL-P98"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="avS-Bl-Kjm" secondAttribute="bottom" constant="82" id="2z8-58-RKv"/>
-                            <constraint firstItem="chE-yH-bNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="50I-Br-gVs"/>
-                            <constraint firstItem="chE-yH-bNb" firstAttribute="top" secondItem="aHP-fe-I3S" secondAttribute="bottom" constant="50" id="5Et-ON-prM"/>
-                            <constraint firstItem="aHP-fe-I3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uow-lf-WlV"/>
-                            <constraint firstItem="avS-Bl-Kjm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJA-kb-2ad"/>
-                            <constraint firstItem="aHP-fe-I3S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="hcf-eS-Vfd"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="jokeBtn" destination="aJA-kb-2ad" id="LOG-0Y-rQ7"/>
+                        <outlet property="jokeBtn" destination="KtF-ki-gyT" id="BPS-lW-Si0"/>
                         <outlet property="jokeLbl" destination="chE-yH-bNb" id="OBh-BN-Md9"/>
                         <outlet property="viewLbl" destination="aHP-fe-I3S" id="kzI-de-au0"/>
                     </connections>

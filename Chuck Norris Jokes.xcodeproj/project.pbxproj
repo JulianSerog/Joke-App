@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */; };
 		9ED3D13A1E2D9DEB00A21D9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D1391E2D9DEB00A21D9E /* main.m */; };
 		9ED3D13D1E2D9DEB00A21D9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13C1E2D9DEB00A21D9E /* AppDelegate.m */; };
 		9ED3D1401E2D9DEB00A21D9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13F1E2D9DEB00A21D9E /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E7BCE381E2DC0EF0074F477 /* NSArray+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
+		9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
 		9ED3D1351E2D9DEB00A21D9E /* Chuck Norris Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Norris Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED3D1391E2D9DEB00A21D9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9ED3D13B1E2D9DEB00A21D9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 			children = (
 				9ED3D13B1E2D9DEB00A21D9E /* AppDelegate.h */,
 				9ED3D13C1E2D9DEB00A21D9E /* AppDelegate.m */,
+				9E7BCE381E2DC0EF0074F477 /* NSArray+Random.h */,
+				9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */,
 				9ED3D13E1E2D9DEB00A21D9E /* ViewController.h */,
 				9ED3D13F1E2D9DEB00A21D9E /* ViewController.m */,
 				9ED3D1411E2D9DEB00A21D9E /* Main.storyboard */,
@@ -279,6 +284,7 @@
 				9ED3D1401E2D9DEB00A21D9E /* ViewController.m in Sources */,
 				9ED3D13D1E2D9DEB00A21D9E /* AppDelegate.m in Sources */,
 				9ED3D13A1E2D9DEB00A21D9E /* main.m in Sources */,
+				9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +522,7 @@
 				9ED3D1641E2D9DEB00A21D9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ED3D1651E2D9DEB00A21D9E /* Build configuration list for PBXNativeTarget "Chuck Norris JokesTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				9ED3D1671E2D9DEB00A21D9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ED3D1681E2D9DEB00A21D9E /* Build configuration list for PBXNativeTarget "Chuck Norris JokesUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				9ED3D16A1E2D9DEB00A21D9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,9 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *viewLbl;
 @property (weak, nonatomic) IBOutlet UILabel *jokeLbl;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *jokeBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *jokeBtn;
 
+@property(strong,nonatomic) NSArray *categories;
 @property(strong, nonatomic) NSString *url;
 
 @end

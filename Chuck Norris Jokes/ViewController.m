@@ -6,6 +6,7 @@
 //  Copyright © 2017 Julian Serog. All rights reserved.
 //
 
+#import "NSArray+Random.h" //for random object in NSArray
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -16,16 +17,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addUI]; //add ui
     
-    //NSLog(@"OBJECT: %@", [self getDataFrom:@"https://api.chucknorris.io/jokes/random"]);
+    self.categories = [[NSArray alloc] initWithObjects:@"dev",@"movie",@"food",@"celebrity",@"science",@"political",@"sport",@"animal",@"music",@"history",@"travel",@"career",@"money",@"fashion", nil];
+    
     self.url = @"https://api.chucknorris.io/jokes/random";
-    [self getDataFrom:self.url];
     
-}
+    //[self getDataFrom:[self randomURL]]; //get a joke randomly from random list of provided categories
+    [self getDataFrom:self.url];
+}//viewDidLoad
 
 -(void) addUI {
+    [self.view setBackgroundColor:[UIColor colorWithRed:30.0/255.0 green:144.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    //joke label/container
+    [self.jokeLbl setClipsToBounds:YES];
+    [self.jokeLbl setBackgroundColor:[UIColor whiteColor]];
+    [self.jokeLbl.layer setCornerRadius:8.0];
     
     
+    //addjoke button
+    [self.jokeBtn setClipsToBounds:YES];
+    [self.jokeBtn.layer setCornerRadius:8.0];
+    [self.jokeBtn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.jokeBtn.layer setBorderWidth:1.0];
+    [self.jokeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 
@@ -50,10 +65,8 @@
     NSURLSessionDataTask *task = [[self getURLSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            
             //NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             //NSLog(@"%@", result);
-            
             self.jokeLbl.text = [self parseJSONIntoJoke:data]; //set joke text
         });//first block
     }];//second block
@@ -68,10 +81,18 @@
     return [parsedJSONArray valueForKey:@"value"];
 }
 
-- (IBAction)jokeBtnPressed:(id)sender {
-    //TODO: check if joke is the same
-    [self getDataFrom:self.url];
 
+-(NSString *) randomURL {
+    NSMutableString *randomUrl = [[NSMutableString alloc] initWithString:@"https://api.chucknorris.io/jokes/random?category={"];
+    [randomUrl appendString:[self.categories randomObject]];
+    [randomUrl appendString:@"}"];
+    return randomUrl;
+}
+
+- (IBAction)btnPressed:(id)sender {
+    //TODO: check if joke is the same
+    //[self getDataFrom:[self randomURL]];
+    [self getDataFrom:self.url]; //get a joke randomly from random list of provided categories
 }
 
 
