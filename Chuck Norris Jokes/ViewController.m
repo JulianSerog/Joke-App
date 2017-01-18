@@ -21,7 +21,7 @@
     
     self.categories = [[NSArray alloc] initWithObjects:@"dev",@"movie",@"food",@"celebrity",@"science",@"political",@"sport",@"animal",@"music",@"history",@"travel",@"career",@"money",@"fashion", nil];
     
-    self.url = @"https://api.chucknorris.io/jokes/random";
+    self.url = @"https://api.icndb.com/jokes/random?exclude=explicit";
     
     //[self getDataFrom:[self randomURL]]; //get a joke randomly from random list of provided categories
     [self getDataFrom:self.url];
@@ -87,6 +87,7 @@
             //if data is not null, display joke, if it is null display an error message
             [self.spinner stopAnimating];
             [self.spinner removeFromSuperview];
+            
             if (data != nil) {
                 [self.jokeLbl setTextColor:[UIColor blackColor]];
                 self.jokeLbl.text = [self parseJSONIntoJoke:data]; //set joke text
@@ -102,9 +103,12 @@
 
 -(NSString *) parseJSONIntoJoke:(NSData *) data {
     
-    NSError *jsonError;
-    NSArray *parsedJSONArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
-    return [parsedJSONArray valueForKey:@"value"];
+    NSError *err;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data //1
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&err];
+    NSLog(@"JOKE: ", json[@"value"][@"joke"]);
+    return json[@"value"][@"joke"];
 }
 
 
