@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *jokeBtn;
 
+@property(strong, nonatomic) UIActivityIndicatorView *spinner;
+
 @property(strong,nonatomic) NSArray *categories;
 @property(strong, nonatomic) NSString *url;
 

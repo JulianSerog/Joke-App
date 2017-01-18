@@ -28,7 +28,12 @@
 }//viewDidLoad
 
 -(void) addUI {
+    //view background color
     [self.view setBackgroundColor:[UIColor colorWithRed:30.0/255.0 green:144.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    
+    //view label
+    [self.viewLbl setTextColor:[UIColor whiteColor]];
+    
     //joke label/container
     [self.jokeLbl setClipsToBounds:YES];
     [self.jokeLbl setBackgroundColor:[UIColor whiteColor]];
@@ -41,6 +46,10 @@
     [self.jokeBtn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     [self.jokeBtn.layer setBorderWidth:1.0];
     [self.jokeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    
+    //spinner
+    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
 
@@ -48,6 +57,9 @@
 -(NSURLSession *) getURLSession {
     static NSURLSession *session = nil;
     static dispatch_once_t onceToken;
+    [self.spinner setCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)];
+    [self.view addSubview:self.spinner];
+    [self.spinner startAnimating];
     
     dispatch_once( &onceToken,
                   ^{
@@ -58,6 +70,7 @@
 }
 
 - (void) getDataFrom:(NSString *)url{
+    
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]]; //pass the GET url through here
@@ -67,7 +80,20 @@
             
             //NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             //NSLog(@"%@", result);
-            self.jokeLbl.text = [self parseJSONIntoJoke:data]; //set joke text
+            //NSLog(@"DATA: %@", data);
+            
+            
+            
+            //if data is not null, display joke, if it is null display an error message
+            [self.spinner stopAnimating];
+            [self.spinner removeFromSuperview];
+            if (data != nil) {
+                [self.jokeLbl setTextColor:[UIColor blackColor]];
+                self.jokeLbl.text = [self parseJSONIntoJoke:data]; //set joke text
+            } else {
+                [self.jokeLbl setTextColor:[UIColor redColor]];
+                self.jokeLbl.text = @"Please connect to internet for Chuck Norris jokes";
+            }//else
         });//first block
     }];//second block
     
