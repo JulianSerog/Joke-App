@@ -107,8 +107,24 @@
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data //1
                                                          options:NSJSONReadingMutableContainers
                                                            error:&err];
-    NSLog(@"JOKE: ", json[@"value"][@"joke"]);
-    return json[@"value"][@"joke"];
+    NSMutableString *joke = json[@"value"][@"joke"];
+    //NSLog(@"JOKE: %@", joke);
+    
+    //string manipulation
+    NSString *singleQuote = @"?";
+    NSString *quote = @"&quot;";
+    
+    
+    
+    if ([joke containsString:quote]) {
+        NSLog(@"JOKE CONTAINS QUOTE");
+        joke = [[joke stringByReplacingOccurrencesOfString:quote withString:@"\""] mutableCopy];
+    } else if([joke containsString:singleQuote]) {
+        NSLog(@"JOKE CONTAINS SINGLE QUOTE");
+        joke = [[joke stringByReplacingOccurrencesOfString:singleQuote withString:@"\'"] mutableCopy];
+    }
+    
+    return joke;
 }
 
 
