@@ -8,8 +8,13 @@
 
 #import "NSArray+Random.h" //for random object in NSArray
 #import "ViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface ViewController ()
+
+@property(strong, nonatomic) NSUserDefaults *defaults;
+@property(strong, nonatomic) NSMutableArray *savedJokes;
+
 
 @end
 
@@ -17,19 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addUI]; //add ui
     
-    self.categories = [[NSArray alloc] initWithObjects:@"dev",@"movie",@"food",@"celebrity",@"science",@"political",@"sport",@"animal",@"music",@"history",@"travel",@"career",@"money",@"fashion", nil];
+    self.defaults = [NSUserDefaults standardUserDefaults];
     
+    NSLog(@"is defaults null: %d", [self.defaults objectForKey:@"savedChuckNorrisJokes"] == nil);
+    
+    [self getJokes];
+    
+     //add ui
+    [self addUI];
+
     self.url = @"https://api.icndb.com/jokes/random?exclude=explicit";
-    
     //[self getDataFrom:[self randomURL]]; //get a joke randomly from random list of provided categories
+    
     [self getDataFrom:self.url];
 }//viewDidLoad
 
+
+//used to retrieve jokes, called everytime view is loaded/appeared
+-(void) getJokes {
+    if ([self.defaults objectForKey:@"savedChuckNorrisJokes"] != nil) {
+        self.savedJokes = [[self.defaults objectForKey:@"savedChuckNorrisJokes"] mutableCopy];
+        [self.savedJokes addObject:@"helloworld"];
+    } else {
+        self.savedJokes = [[NSMutableArray alloc] init];
+        [self.defaults setObject:self.savedJokes forKey:@"savedChuckNorrisJokes"];
+    }//if/else
+}
+
 -(void) addUI {
     //view background color
-    [self.view setBackgroundColor:[UIColor colorWithRed:30.0/255.0 green:144.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    [self.view setBackgroundColor:[UIColor customLightBlue]];
     
     //view label
     [self.viewLbl setTextColor:[UIColor whiteColor]];
@@ -47,6 +70,12 @@
     [self.jokeBtn.layer setBorderWidth:1.0];
     [self.jokeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
+    //save joke button
+    [self.saveJokeBtn setClipsToBounds:YES];
+    [self.saveJokeBtn.layer setCornerRadius:8.0];
+    [self.saveJokeBtn.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.saveJokeBtn.layer setBorderWidth:1.0];
+    [self.saveJokeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     //spinner
     self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -129,17 +158,30 @@
 
 
 -(NSString *) randomURL {
+    
+    self.categories = [[NSArray alloc] initWithObjects:@"dev",@"movie",@"food",@"celebrity",@"science",@"political",@"sport",@"animal",@"music",@"history",@"travel",@"career",@"money",@"fashion", nil];
     NSMutableString *randomUrl = [[NSMutableString alloc] initWithString:@"https://api.chucknorris.io/jokes/random?category={"];
     [randomUrl appendString:[self.categories randomObject]];
     [randomUrl appendString:@"}"];
     return randomUrl;
-}
+}//randomURL
 
 - (IBAction)btnPressed:(id)sender {
     //TODO: check if joke is the same
     //[self getDataFrom:[self randomURL]];
     [self getDataFrom:self.url]; //get a joke randomly from random list of provided categories
-}
+}//btnPressed
+
+
+- (IBAction)saveJokePressed:(id)sender {
+    if ([self.savedJokes containsObject:self.jokeLbl.text]) {
+        NSLog(@"DUPLICATE OBJECT, NOT SAVING OBJECT");
+        //TODO: create a UI Alert to show user they are saving a duplicate note
+    } else {
+        [self.savedJokes addObject:self.jokeLbl.text];
+        [self.defaults setObject:self.savedJokes forKey:@"savedChuckNorrisJokes"];
+    }//else
+}//saveJokePressed
 
 
 

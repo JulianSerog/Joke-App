@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *jokeLbl;
 
 @property (weak, nonatomic) IBOutlet UIButton *jokeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *saveJokeBtn;
 
 @property(strong, nonatomic) UIActivityIndicatorView *spinner;
 
