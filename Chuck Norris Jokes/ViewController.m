@@ -43,7 +43,6 @@
 -(void) getJokes {
     if ([self.defaults objectForKey:@"savedChuckNorrisJokes"] != nil) {
         self.savedJokes = [[self.defaults objectForKey:@"savedChuckNorrisJokes"] mutableCopy];
-        [self.savedJokes addObject:@"helloworld"];
     } else {
         self.savedJokes = [[NSMutableArray alloc] init];
         [self.defaults setObject:self.savedJokes forKey:@"savedChuckNorrisJokes"];
@@ -177,6 +176,14 @@
     if ([self.savedJokes containsObject:self.jokeLbl.text]) {
         NSLog(@"DUPLICATE OBJECT, NOT SAVING OBJECT");
         //TODO: create a UI Alert to show user they are saving a duplicate note
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Already Saved!" message:@"You've already saved this joke!" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* alertAction = [UIAlertAction
+                                    actionWithTitle:@"Close"
+                                    style:UIAlertActionStyleDefault
+                                    handler:nil];
+        [alert addAction:alertAction];
+        [self presentViewController:alert animated:YES completion:nil];
     } else {
         [self.savedJokes addObject:self.jokeLbl.text];
         [self.defaults setObject:self.savedJokes forKey:@"savedChuckNorrisJokes"];

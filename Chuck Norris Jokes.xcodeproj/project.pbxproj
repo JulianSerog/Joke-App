@@ -10,7 +10,7 @@
 		9E7A1C2A1E33FCF4002D8C0B /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A1C291E33FCF4002D8C0B /* FavoritesVC.m */; };
 		9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */; };
 		9EA275B61E341FFD00E2DDDC /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */; };
-		9EA275B91E342EC500E2DDDC /* CustomTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B81E342EC500E2DDDC /* CustomTableCellTableViewCell.m */; };
+		9EA275B91E342EC500E2DDDC /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B81E342EC500E2DDDC /* CustomTableCell.m */; };
 		9ED3D13A1E2D9DEB00A21D9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D1391E2D9DEB00A21D9E /* main.m */; };
 		9ED3D13D1E2D9DEB00A21D9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13C1E2D9DEB00A21D9E /* AppDelegate.m */; };
 		9ED3D1401E2D9DEB00A21D9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13F1E2D9DEB00A21D9E /* ViewController.m */; };
@@ -45,8 +45,8 @@
 		9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
 		9EA275B41E341FFD00E2DDDC /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
-		9EA275B71E342EC500E2DDDC /* CustomTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCellTableViewCell.h; sourceTree = "<group>"; };
-		9EA275B81E342EC500E2DDDC /* CustomTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCellTableViewCell.m; sourceTree = "<group>"; };
+		9EA275B71E342EC500E2DDDC /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		9EA275B81E342EC500E2DDDC /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
 		9ED3D1351E2D9DEB00A21D9E /* Chuck Norris Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Norris Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED3D1391E2D9DEB00A21D9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9ED3D13B1E2D9DEB00A21D9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 				9ED3D13F1E2D9DEB00A21D9E /* ViewController.m */,
 				9E7A1C281E33FCF4002D8C0B /* FavoritesVC.h */,
 				9E7A1C291E33FCF4002D8C0B /* FavoritesVC.m */,
-				9EA275B71E342EC500E2DDDC /* CustomTableCellTableViewCell.h */,
-				9EA275B81E342EC500E2DDDC /* CustomTableCellTableViewCell.m */,
+				9EA275B71E342EC500E2DDDC /* CustomTableCell.h */,
+				9EA275B81E342EC500E2DDDC /* CustomTableCell.m */,
 				9EA275B41E341FFD00E2DDDC /* UIColor+CustomColors.h */,
 				9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */,
 				9ED3D1411E2D9DEB00A21D9E /* Main.storyboard */,
@@ -307,7 +307,7 @@
 				9EA275B61E341FFD00E2DDDC /* UIColor+CustomColors.m in Sources */,
 				9ED3D1401E2D9DEB00A21D9E /* ViewController.m in Sources */,
 				9ED3D13D1E2D9DEB00A21D9E /* AppDelegate.m in Sources */,
-				9EA275B91E342EC500E2DDDC /* CustomTableCellTableViewCell.m in Sources */,
+				9EA275B91E342EC500E2DDDC /* CustomTableCell.m in Sources */,
 				9ED3D13A1E2D9DEB00A21D9E /* main.m in Sources */,
 				9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */,
 				9E7A1C2A1E33FCF4002D8C0B /* FavoritesVC.m in Sources */,
