@@ -38,6 +38,10 @@
     [self getDataFrom:self.url];
 }//viewDidLoad
 
+-(void) viewDidAppear:(BOOL)animated {
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"dicefilled.png"]];
+}//viewDidAppear
+
 
 //used to retrieve jokes, called everytime view is loaded/appeared
 -(void) getJokes {

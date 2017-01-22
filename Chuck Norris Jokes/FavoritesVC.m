@@ -73,11 +73,14 @@
     
     //sub view things
     //sub view
-    self.jokeView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 0.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6)];
+    self.jokeView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 1.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6)];
     [self.jokeView setBackgroundColor:[UIColor whiteColor]];
     [self.jokeView.layer setCornerRadius:8.0];
     [self.jokeView.layer setBorderColor:[[UIColor blackColor] CGColor]];
     [self.jokeView.layer setBorderWidth:1.0];
+    self.jokeView.alpha = 0;
+    [self.view addSubview:self.jokeView];
+    
     //label for sub view
     self.innerViewLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.jokeView.frame.size.width, self.jokeView.frame.size.height)];
     [self.innerViewLbl setTextAlignment:NSTextAlignmentCenter];
@@ -95,8 +98,12 @@
 
 //removes subview that shows saved jokes
 - (void)dismissHelper:(UIButton *)sender {
-    [self.jokeView removeFromSuperview];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.jokeView.frame = CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 1.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6);
+        self.jokeView.alpha = 0;
+    }];
     sender.hidden = YES;
+    
 }
 
 //TODO: add swipe left gestures to delete cells
@@ -135,9 +142,13 @@
     transparencyButton.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:transparencyButton belowSubview:self.jokeView];
     [transparencyButton addTarget:self action:@selector(dismissHelper:) forControlEvents:UIControlEventTouchUpInside];
-    
+
     self.innerViewLbl.text = self.savedJokes[indexPath.row];
-    [self.view addSubview:self.jokeView];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.jokeView.alpha = 1;
+        self.jokeView.frame = CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 0.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6);
+    }];
 }
 
 

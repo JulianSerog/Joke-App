@@ -11,6 +11,8 @@
 		9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */; };
 		9EA275B61E341FFD00E2DDDC /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */; };
 		9EA275B91E342EC500E2DDDC /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B81E342EC500E2DDDC /* CustomTableCell.m */; };
+		9EA275BF1E349B5700E2DDDC /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA275BE1E349B5700E2DDDC /* dice.png */; };
+		9EA275C11E349BE300E2DDDC /* dicefilled.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA275C01E349BE300E2DDDC /* dicefilled.png */; };
 		9ED3D13A1E2D9DEB00A21D9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D1391E2D9DEB00A21D9E /* main.m */; };
 		9ED3D13D1E2D9DEB00A21D9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13C1E2D9DEB00A21D9E /* AppDelegate.m */; };
 		9ED3D1401E2D9DEB00A21D9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3D13F1E2D9DEB00A21D9E /* ViewController.m */; };
@@ -47,6 +49,8 @@
 		9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		9EA275B71E342EC500E2DDDC /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
 		9EA275B81E342EC500E2DDDC /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
+		9EA275BE1E349B5700E2DDDC /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		9EA275C01E349BE300E2DDDC /* dicefilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dicefilled.png; sourceTree = "<group>"; };
 		9ED3D1351E2D9DEB00A21D9E /* Chuck Norris Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Norris Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED3D1391E2D9DEB00A21D9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9ED3D13B1E2D9DEB00A21D9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		9E7A1C2B1E34000A002D8C0B /* img */ = {
 			isa = PBXGroup;
 			children = (
+				9EA275C01E349BE300E2DDDC /* dicefilled.png */,
+				9EA275BE1E349B5700E2DDDC /* dice.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA275BF1E349B5700E2DDDC /* dice.png in Resources */,
+				9EA275C11E349BE300E2DDDC /* dicefilled.png in Resources */,
 				9ED3D1481E2D9DEB00A21D9E /* LaunchScreen.storyboard in Resources */,
 				9ED3D1451E2D9DEB00A21D9E /* Assets.xcassets in Resources */,
 				9ED3D1431E2D9DEB00A21D9E /* Main.storyboard in Resources */,

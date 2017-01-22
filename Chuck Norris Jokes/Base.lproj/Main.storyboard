@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Random-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -80,7 +80,9 @@
                             <constraint firstItem="ruA-Ky-nie" firstAttribute="baseline" secondItem="KtF-ki-gyT" secondAttribute="firstBaseline" id="xpW-n9-FK3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="zMS-a6-4vr"/>
+                    <tabBarItem key="tabBarItem" title="Random" image="dice.png" selectedImage="dicefilled.png" id="zMS-a6-4vr">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="jokeBtn" destination="KtF-ki-gyT" id="BPS-lW-Si0"/>
                         <outlet property="jokeLbl" destination="chE-yH-bNb" id="OBh-BN-Md9"/>
@@ -146,4 +148,8 @@
             <point key="canvasLocation" x="868" y="496.10194902548727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dice.png" width="30" height="30"/>
+        <image name="dicefilled.png" width="30" height="30"/>
+    </resources>
 </document>
