@@ -15,6 +15,8 @@
 @property(strong, nonatomic) NSUserDefaults *defaults;
 @property(strong, nonatomic) NSMutableArray *savedJokes;
 @property(strong, nonatomic) UILabel *noSavedJokesLbl;
+@property(strong, nonatomic) UIView *jokeView;
+@property(strong, nonatomic) UILabel *innerViewLbl;
 
 @end
 
@@ -68,6 +70,19 @@
     //table view
     [self.tableView setBackgroundColor:[UIColor customLightBlue]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    //sub view things
+    //sub view
+    self.jokeView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 0.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6)];
+    [self.jokeView setBackgroundColor:[UIColor whiteColor]];
+    [self.jokeView.layer setCornerRadius:8.0];
+    [self.jokeView.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.jokeView.layer setBorderWidth:1.0];
+    //label for sub view
+    self.innerViewLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.jokeView.frame.size.width, self.jokeView.frame.size.height)];
+    [self.innerViewLbl setTextAlignment:NSTextAlignmentCenter];
+    [self.innerViewLbl setNumberOfLines:13];
+    [self.jokeView addSubview:self.innerViewLbl];
 }//addUI
 
 -(void) checkForJokes {
@@ -76,6 +91,12 @@
     } else {
         [self.noSavedJokesLbl removeFromSuperview];
     }
+}
+
+//removes subview that shows saved jokes
+- (void)dismissHelper:(UIButton *)sender {
+    [self.jokeView removeFromSuperview];
+    sender.hidden = YES;
 }
 
 //TODO: add swipe left gestures to delete cells
@@ -109,23 +130,16 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //sub view
-    UIView *jokeView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width * 0.1, self.view.frame.size.height * 0.2, self.view.frame.size.width * 0.8, self.view.frame.size.height * 0.6)];
-    [jokeView setBackgroundColor:[UIColor whiteColor]];
-    [jokeView.layer setCornerRadius:8.0];
-    [jokeView.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    [jokeView.layer setBorderWidth:1.0];
-    //label for sub view
-    UILabel *innerViewLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, jokeView.frame.size.width, jokeView.frame.size.height)];
-    [innerViewLbl setTextAlignment:NSTextAlignmentCenter];
-    innerViewLbl.text = self.savedJokes[indexPath.row];
-    [innerViewLbl setNumberOfLines:13];
+
+    UIButton *transparencyButton = [[UIButton alloc] initWithFrame:self.view.bounds];
+    transparencyButton.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:transparencyButton belowSubview:self.jokeView];
+    [transparencyButton addTarget:self action:@selector(dismissHelper:) forControlEvents:UIControlEventTouchUpInside];
     
-    [jokeView addSubview:innerViewLbl];
-    
-    [self.view addSubview:jokeView];
-    
+    self.innerViewLbl.text = self.savedJokes[indexPath.row];
+    [self.view addSubview:self.jokeView];
 }
+
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
