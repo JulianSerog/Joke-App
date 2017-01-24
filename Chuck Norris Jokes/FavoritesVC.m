@@ -142,8 +142,8 @@
     transparencyButton.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:transparencyButton belowSubview:self.jokeView];
     [transparencyButton addTarget:self action:@selector(dismissHelper:) forControlEvents:UIControlEventTouchUpInside];
-
-    self.innerViewLbl.text = self.savedJokes[indexPath.row];
+    
+    [self.innerViewLbl setText:self.savedJokes[indexPath.row]];
     
     [UIView animateWithDuration:0.5 animations:^{
         self.jokeView.alpha = 1;
