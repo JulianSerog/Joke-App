@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ChuckNorrisJokesWatch" customModuleProvider="target">
                     <items>
-                        <label width="156" height="128" alignment="left" numberOfLines="15" id="5bW-vI-g7y"/>
+                        <label width="156" height="128" alignment="left" numberOfLines="20" id="5bW-vI-g7y"/>
                         <button width="1" alignment="left" title="New Joke" id="EEg-uo-tbT">
                             <connections>
                                 <action selector="newJokePressed" destination="AgC-eL-Hgc" id="smS-2b-Mlp"/>
