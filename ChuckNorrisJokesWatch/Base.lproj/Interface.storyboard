@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ChuckNorrisJokesWatch" customModuleProvider="target">
+                    <items>
+                        <label width="156" height="128" alignment="left" numberOfLines="15" id="5bW-vI-g7y"/>
+                        <button width="1" alignment="left" title="New Joke" id="EEg-uo-tbT">
+                            <connections>
+                                <action selector="newJokePressed" destination="AgC-eL-Hgc" id="smS-2b-Mlp"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="0.1176470588" green="0.56470588239999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="jokeLbl" destination="5bW-vI-g7y" id="4Xv-oS-lUp"/>
+                        <outlet property="newJokeBtn" destination="EEg-uo-tbT" id="cCA-a3-q5e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.69230769230771" y="354.38461538461542"/>
+        </scene>
+    </scenes>
+</document>

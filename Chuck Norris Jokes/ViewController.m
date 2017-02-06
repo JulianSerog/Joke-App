@@ -151,7 +151,8 @@
     if ([joke containsString:quote]) {
         NSLog(@"JOKE CONTAINS QUOTE");
         joke = [[joke stringByReplacingOccurrencesOfString:quote withString:@"\""] mutableCopy];
-    } else if([joke containsString:singleQuote]) {
+    }
+    if ([joke containsString:singleQuote]) {
         NSLog(@"JOKE CONTAINS SINGLE QUOTE");
         joke = [[joke stringByReplacingOccurrencesOfString:singleQuote withString:@"\'"] mutableCopy];
     }

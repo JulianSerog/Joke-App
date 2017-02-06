@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1E88FB1E46DB1A00A308DD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1E88F91E46DB1A00A308DD /* Interface.storyboard */; };
+		9E1E88FD1E46DB1A00A308DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1E88FC1E46DB1A00A308DD /* Assets.xcassets */; };
+		9E1E89041E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9E1E89031E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9E1E890B1E46DB1A00A308DD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E890A1E46DB1A00A308DD /* InterfaceController.swift */; };
+		9E1E890D1E46DB1A00A308DD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E890C1E46DB1A00A308DD /* ExtensionDelegate.swift */; };
+		9E1E890F1E46DB1A00A308DD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E890E1E46DB1A00A308DD /* NotificationController.swift */; };
+		9E1E89111E46DB1A00A308DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1E89101E46DB1A00A308DD /* Assets.xcassets */; };
+		9E1E89151E46DB1A00A308DD /* ChuckNorrisJokesWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9E1E88F71E46DB1A00A308DD /* ChuckNorrisJokesWatch.app */; };
 		9E7A1C2A1E33FCF4002D8C0B /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A1C291E33FCF4002D8C0B /* FavoritesVC.m */; };
 		9E7BCE3A1E2DC0EF0074F477 /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BCE391E2DC0EF0074F477 /* NSArray+Random.m */; };
 		9EA275B61E341FFD00E2DDDC /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA275B51E341FFD00E2DDDC /* UIColor+CustomColors.m */; };
@@ -24,6 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9E1E89051E46DB1A00A308DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ED3D12D1E2D9DEB00A21D9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E1E89021E46DB1A00A308DD;
+			remoteInfo = "ChuckNorrisJokesWatch Extension";
+		};
+		9E1E89131E46DB1A00A308DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ED3D12D1E2D9DEB00A21D9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E1E88F61E46DB1A00A308DD;
+			remoteInfo = ChuckNorrisJokesWatch;
+		};
 		9ED3D14F1E2D9DEB00A21D9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9ED3D12D1E2D9DEB00A21D9E /* Project object */;
@@ -40,7 +62,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9E1E891B1E46DB1A00A308DD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9E1E89041E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E1E891D1E46DB1A00A308DD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9E1E89151E46DB1A00A308DD /* ChuckNorrisJokesWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9E1E88F71E46DB1A00A308DD /* ChuckNorrisJokesWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisJokesWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1E88FA1E46DB1A00A308DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9E1E88FC1E46DB1A00A308DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E1E88FE1E46DB1A00A308DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E1E89031E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ChuckNorrisJokesWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1E89091E46DB1A00A308DD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9E1E890A1E46DB1A00A308DD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9E1E890C1E46DB1A00A308DD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9E1E890E1E46DB1A00A308DD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9E1E89101E46DB1A00A308DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E1E89121E46DB1A00A308DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7A1C281E33FCF4002D8C0B /* FavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesVC.h; sourceTree = "<group>"; };
 		9E7A1C291E33FCF4002D8C0B /* FavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesVC.m; sourceTree = "<group>"; };
 		9E7BCE381E2DC0EF0074F477 /* NSArray+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
@@ -70,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9E1E89001E46DB1A00A308DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED3D1321E2D9DEB00A21D9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,6 +159,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1E88F81E46DB1A00A308DD /* ChuckNorrisJokesWatch */ = {
+			isa = PBXGroup;
+			children = (
+				9E1E88F91E46DB1A00A308DD /* Interface.storyboard */,
+				9E1E88FC1E46DB1A00A308DD /* Assets.xcassets */,
+				9E1E88FE1E46DB1A00A308DD /* Info.plist */,
+			);
+			path = ChuckNorrisJokesWatch;
+			sourceTree = "<group>";
+		};
+		9E1E89071E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9E1E890A1E46DB1A00A308DD /* InterfaceController.swift */,
+				9E1E890C1E46DB1A00A308DD /* ExtensionDelegate.swift */,
+				9E1E890E1E46DB1A00A308DD /* NotificationController.swift */,
+				9E1E89101E46DB1A00A308DD /* Assets.xcassets */,
+				9E1E89121E46DB1A00A308DD /* Info.plist */,
+				9E1E89081E46DB1A00A308DD /* Supporting Files */,
+			);
+			path = "ChuckNorrisJokesWatch Extension";
+			sourceTree = "<group>";
+		};
+		9E1E89081E46DB1A00A308DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E1E89091E46DB1A00A308DD /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9E7A1C2B1E34000A002D8C0B /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +205,8 @@
 				9ED3D1371E2D9DEB00A21D9E /* Chuck Norris Jokes */,
 				9ED3D1511E2D9DEB00A21D9E /* Chuck Norris JokesTests */,
 				9ED3D15C1E2D9DEB00A21D9E /* Chuck Norris JokesUITests */,
+				9E1E88F81E46DB1A00A308DD /* ChuckNorrisJokesWatch */,
+				9E1E89071E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension */,
 				9ED3D1361E2D9DEB00A21D9E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +217,8 @@
 				9ED3D1351E2D9DEB00A21D9E /* Chuck Norris Jokes.app */,
 				9ED3D14E1E2D9DEB00A21D9E /* Chuck Norris JokesTests.xctest */,
 				9ED3D1591E2D9DEB00A21D9E /* Chuck Norris JokesUITests.xctest */,
+				9E1E88F71E46DB1A00A308DD /* ChuckNorrisJokesWatch.app */,
+				9E1E89031E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +277,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9E1E88F61E46DB1A00A308DD /* ChuckNorrisJokesWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E1E891C1E46DB1A00A308DD /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesWatch" */;
+			buildPhases = (
+				9E1E88F51E46DB1A00A308DD /* Resources */,
+				9E1E891B1E46DB1A00A308DD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E1E89061E46DB1A00A308DD /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisJokesWatch;
+			productName = ChuckNorrisJokesWatch;
+			productReference = 9E1E88F71E46DB1A00A308DD /* ChuckNorrisJokesWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9E1E89021E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E1E891A1E46DB1A00A308DD /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesWatch Extension" */;
+			buildPhases = (
+				9E1E88FF1E46DB1A00A308DD /* Sources */,
+				9E1E89001E46DB1A00A308DD /* Frameworks */,
+				9E1E89011E46DB1A00A308DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChuckNorrisJokesWatch Extension";
+			productName = "ChuckNorrisJokesWatch Extension";
+			productReference = 9E1E89031E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		9ED3D1341E2D9DEB00A21D9E /* Chuck Norris Jokes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ED3D1621E2D9DEB00A21D9E /* Build configuration list for PBXNativeTarget "Chuck Norris Jokes" */;
@@ -184,10 +318,12 @@
 				9ED3D1311E2D9DEB00A21D9E /* Sources */,
 				9ED3D1321E2D9DEB00A21D9E /* Frameworks */,
 				9ED3D1331E2D9DEB00A21D9E /* Resources */,
+				9E1E891D1E46DB1A00A308DD /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9E1E89141E46DB1A00A308DD /* PBXTargetDependency */,
 			);
 			name = "Chuck Norris Jokes";
 			productName = "Chuck Norris Jokes";
@@ -236,9 +372,20 @@
 		9ED3D12D1E2D9DEB00A21D9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Julian Serog";
 				TargetAttributes = {
+					9E1E88F61E46DB1A00A308DD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5SA77TVD64;
+						ProvisioningStyle = Automatic;
+					};
+					9E1E89021E46DB1A00A308DD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5SA77TVD64;
+						ProvisioningStyle = Automatic;
+					};
 					9ED3D1341E2D9DEB00A21D9E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5SA77TVD64;
@@ -274,11 +421,30 @@
 				9ED3D1341E2D9DEB00A21D9E /* Chuck Norris Jokes */,
 				9ED3D14D1E2D9DEB00A21D9E /* Chuck Norris JokesTests */,
 				9ED3D1581E2D9DEB00A21D9E /* Chuck Norris JokesUITests */,
+				9E1E88F61E46DB1A00A308DD /* ChuckNorrisJokesWatch */,
+				9E1E89021E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9E1E88F51E46DB1A00A308DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E1E88FD1E46DB1A00A308DD /* Assets.xcassets in Resources */,
+				9E1E88FB1E46DB1A00A308DD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E1E89011E46DB1A00A308DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E1E89111E46DB1A00A308DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED3D1331E2D9DEB00A21D9E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +474,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9E1E88FF1E46DB1A00A308DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E1E890F1E46DB1A00A308DD /* NotificationController.swift in Sources */,
+				9E1E890D1E46DB1A00A308DD /* ExtensionDelegate.swift in Sources */,
+				9E1E890B1E46DB1A00A308DD /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ED3D1311E2D9DEB00A21D9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +517,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9E1E89061E46DB1A00A308DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E1E89021E46DB1A00A308DD /* ChuckNorrisJokesWatch Extension */;
+			targetProxy = 9E1E89051E46DB1A00A308DD /* PBXContainerItemProxy */;
+		};
+		9E1E89141E46DB1A00A308DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E1E88F61E46DB1A00A308DD /* ChuckNorrisJokesWatch */;
+			targetProxy = 9E1E89131E46DB1A00A308DD /* PBXContainerItemProxy */;
+		};
 		9ED3D1501E2D9DEB00A21D9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9ED3D1341E2D9DEB00A21D9E /* Chuck Norris Jokes */;
@@ -354,6 +540,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9E1E88F91E46DB1A00A308DD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E1E88FA1E46DB1A00A308DD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		9ED3D1411E2D9DEB00A21D9E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -373,6 +567,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9E1E89161E46DB1A00A308DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5SA77TVD64;
+				IBSC_MODULE = ChuckNorrisJokesWatch_Extension;
+				INFOPLIST_FILE = ChuckNorrisJokesWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "SerogDev.Chuck-Norris-Jokes.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		9E1E89171E46DB1A00A308DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5SA77TVD64;
+				IBSC_MODULE = ChuckNorrisJokesWatch_Extension;
+				INFOPLIST_FILE = ChuckNorrisJokesWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "SerogDev.Chuck-Norris-Jokes.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		9E1E89181E46DB1A00A308DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 5SA77TVD64;
+				INFOPLIST_FILE = "ChuckNorrisJokesWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SerogDev.Chuck-Norris-Jokes.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		9E1E89191E46DB1A00A308DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 5SA77TVD64;
+				INFOPLIST_FILE = "ChuckNorrisJokesWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SerogDev.Chuck-Norris-Jokes.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		9ED3D1601E2D9DEB00A21D9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +810,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9E1E891A1E46DB1A00A308DD /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E89181E46DB1A00A308DD /* Debug */,
+				9E1E89191E46DB1A00A308DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9E1E891C1E46DB1A00A308DD /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E89161E46DB1A00A308DD /* Debug */,
+				9E1E89171E46DB1A00A308DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9ED3D1301E2D9DEB00A21D9E /* Build configuration list for PBXProject "Chuck Norris Jokes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
