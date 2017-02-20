@@ -817,6 +817,7 @@
 				9E1E89191E46DB1A00A308DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E1E891C1E46DB1A00A308DD /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesWatch" */ = {
 			isa = XCConfigurationList;
@@ -825,6 +826,7 @@
 				9E1E89171E46DB1A00A308DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9ED3D1301E2D9DEB00A21D9E /* Build configuration list for PBXProject "Chuck Norris Jokes" */ = {
 			isa = XCConfigurationList;

@@ -21,12 +21,13 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        getJokeFromAPI()
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        getJokeFromAPI()
+        
     }
     
     override func didDeactivate() {

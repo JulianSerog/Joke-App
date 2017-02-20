@@ -14,7 +14,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ChuckNorrisJokesWatch" customModuleProvider="target">
                     <items>
-                        <label width="156" height="128" alignment="left" numberOfLines="20" id="5bW-vI-g7y"/>
+                        <label width="156" height="194" alignment="left" textAlignment="center" numberOfLines="20" id="5bW-vI-g7y">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
                         <button width="1" alignment="left" title="New Joke" id="EEg-uo-tbT">
                             <connections>
                                 <action selector="newJokePressed" destination="AgC-eL-Hgc" id="smS-2b-Mlp"/>
@@ -28,7 +30,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.69230769230771" y="354.38461538461542"/>
+            <point key="canvasLocation" x="219.69230769230771" y="370.94871794871796"/>
         </scene>
     </scenes>
 </document>

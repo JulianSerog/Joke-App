@@ -115,7 +115,7 @@
 }
 */
 
-//MARK: table view methods
+#pragma mark - table view methods
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomTableCell *cell = [[CustomTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cusTableCell"];
     
