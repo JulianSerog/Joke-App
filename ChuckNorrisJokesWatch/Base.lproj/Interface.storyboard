@@ -14,9 +14,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ChuckNorrisJokesWatch" customModuleProvider="target">
                     <items>
-                        <label width="156" height="194" alignment="left" textAlignment="center" numberOfLines="20" id="5bW-vI-g7y">
-                            <fontDescription key="font" type="system" pointSize="12"/>
-                        </label>
+                        <group width="1" alignment="left" id="Jd9-JW-ELb">
+                            <items>
+                                <label width="1" alignment="left" textAlignment="center" numberOfLines="20" id="5bW-vI-g7y">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="10"/>
+                        </group>
                         <button width="1" alignment="left" title="New Joke" id="EEg-uo-tbT">
                             <connections>
                                 <action selector="newJokePressed" destination="AgC-eL-Hgc" id="smS-2b-Mlp"/>
